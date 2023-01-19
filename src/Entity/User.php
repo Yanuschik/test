@@ -16,16 +16,16 @@ class User implements UserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 40)]
-    private ?string $firstName = null;
+    private string $firstName;
 
     #[ORM\Column(length: 40)]
-    private ?string $lastName = null;
+    private string $lastName;
 
     #[ORM\Column(length: 100, unique: true)]
-    private ?string $email = null;
+    private string $email;
 
     #[ORM\Column(length: 8)]
-    private ?string $phone = null;
+    private string $phone;
 
     public function getId(): ?int
     {
